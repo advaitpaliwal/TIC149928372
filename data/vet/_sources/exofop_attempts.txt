@@ -1,0 +1,1 @@
+exa web_fetch_exa 2026-10-24 ~02:23 EDT: CRAWL_LIVECRAWL_TIMEOUT; direct curl from Mac mini and Spark: 525 then timeouts (HTTP 000 at 40 s)

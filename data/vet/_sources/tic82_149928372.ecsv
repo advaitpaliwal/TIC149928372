@@ -1,0 +1,1062 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - name: TIC
+#   datatype: int64
+#   description: '[1/10005000540] TESS Input Catalog identifier ( ID ) (1)'
+#   meta: !!omap
+#   - {ucd: ID_MAIN}
+#   - {width: 11}
+# - name: RAJ2000
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: Right Ascension (J2000) (ra) (2)
+#   meta: !!omap
+#   - {ucd: POS_EQ_RA_MAIN}
+#   - {width: 15}
+#   - {precision: '11'}
+# - name: DEJ2000
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: Declination (J2000) (dec) (2)
+#   meta: !!omap
+#   - {ucd: POS_EQ_DEC_MAIN}
+#   - {width: 15}
+#   - {precision: '11'}
+# - name: HIP
+#   datatype: int32
+#   description: '[1/120404]? Hipparcos identifier'
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {width: 6}
+#   - values: {'null': -2147483648}
+# - name: TYC
+#   datatype: string
+#   description: Tycho2 identifier
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 12*}
+# - name: UCAC4
+#   datatype: string
+#   description: UCAC4 identifier (UCAC)
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 10*}
+# - name: 2MASS
+#   datatype: string
+#   description: 2MASS identifier (HHMMSSss+DDMMSSs, J2000) (TWOMASS)
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 17*}
+# - name: objID
+#   datatype: int64
+#   description: '? SDSS DR9 object identifier "objID"'
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {width: 19}
+#   - values: {'null': -9223372036854775808}
+# - name: WISEA
+#   datatype: string
+#   description: ALLWISE identifier (JHHMMSS.ss+DDMMSS.s) (ALLWISE)
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 19*}
+# - name: GAIA
+#   datatype: int64
+#   description: '? GAIA DR2 identifier'
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {width: 19}
+#   - values: {'null': -9223372036854775808}
+# - name: APASS
+#   datatype: int32
+#   description: '[1/61176401]? APASS DR9 identifier (3)'
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {width: 8}
+#   - values: {'null': -2147483648}
+# - name: KIC
+#   datatype: int32
+#   description: '[1/13161029]? KIC identifier'
+#   meta: !!omap
+#   - {ucd: ID_ALTERNATIVE}
+#   - {width: 8}
+#   - values: {'null': -2147483648}
+# - name: S/G
+#   datatype: string
+#   description: 'Object Type (stellarity: "STAR" or "EXTENDED") (objType)'
+#   meta: !!omap
+#   - {ucd: CLASS_STAR/GALAXY}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 8*}
+# - name: Ref
+#   datatype: string
+#   description: The source of the object in the TIC (typeSrc)
+#   meta: !!omap
+#   - {ucd: REFER_CODE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 11*}
+# - name: r_Pos
+#   datatype: string
+#   description: Source of the position (POSflag) (4)
+#   meta: !!omap
+#   - {ucd: REFER_CODE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 11*}
+# - name: pmRA
+#   unit: mas / yr
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[-4411/6766]? Proper motion in Right Ascension'
+#   meta: !!omap
+#   - {ucd: POS_EQ_PMRA}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_pmRA
+#   unit: mas / yr
+#   datatype: float64
+#   format: '{:7.3f}'
+#   description: '[0/200]? Uncertainty in pmRA'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: pmDE
+#   unit: mas / yr
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[-5818/10363]? Proper motion in Declination (pmDEC)'
+#   meta: !!omap
+#   - {ucd: POS_EQ_PMDEC}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_pmDE
+#   unit: mas / yr
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.01/99]? Uncertainty in pmDE (e_pmDEC)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: r_pm
+#   datatype: string
+#   description: Source of the proper motion (PMflag) (4)
+#   meta: !!omap
+#   - {ucd: REFER_CODE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 6*}
+# - name: Plx
+#   unit: mas
+#   datatype: float64
+#   format: '{:10.4f}'
+#   description: '[-1857/1852]? Parallax (plx) (5)'
+#   meta: !!omap
+#   - {ucd: POS_PARLX_TRIG}
+#   - {width: 10}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: e_Plx
+#   unit: mas
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[0.009/94]? Error in the parallax (e_plx)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: r_Plx
+#   datatype: string
+#   description: Source of the parallax (PARflag) (4)
+#   meta: !!omap
+#   - {ucd: REFER_CODE}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# - name: GLON
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: Galactic Longitude (gallong)
+#   meta: !!omap
+#   - {ucd: POS_GAL_LON}
+#   - {width: 15}
+#   - {precision: '11'}
+# - name: GLAT
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: Galactic Latitude (gallat)
+#   meta: !!omap
+#   - {ucd: POS_GAL_LAT}
+#   - {width: 15}
+#   - {precision: '11'}
+# - name: ELON
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: Ecliptic longitude (eclong)
+#   meta: !!omap
+#   - {ucd: POS_EC_LON}
+#   - {width: 15}
+#   - {precision: '11'}
+# - name: ELAT
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: Ecliptic Latitude (eclat)
+#   meta: !!omap
+#   - {ucd: POS_EC_LAT}
+#   - {width: 15}
+#   - {precision: '11'}
+# - name: Bmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-6.7/50]? Johnson B magnitude (6)'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_B}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Bmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-10/26.1]? Uncertainty in Bmag (26)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Vmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-0.11/23.1]? Johnson V magnitude (7)'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_V}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Vmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-0.7/7]? Uncertainty in Vmag (26)'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: umag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[5.3/30]? SDSS u-band (AB) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_U}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_umag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[0/50260]? Uncertainty in umag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: gmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[5.4/30]? SDSS g-band (AB) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_G}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_gmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[0/27628]? Uncertainty in gmag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: rmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[4/30]? SDSS r-band (AB) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_R}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_rmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[0/91514]? Uncertainty in rmag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: imag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[3.9/30]? SDSS i-band (AB) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_I}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_imag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[0/63182]? Uncertainty in imag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: zmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[4.3/30]? SDSS z-band (AB) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_SDSS_Z}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_zmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.3f}'
+#   description: '[0/63182]? Uncertainty in zmag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 9}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Jmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-3/26]? 2MASS Johnson J-band magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_J}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Jmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/10]? Uncertainty in Jmag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Hmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-4.1/24.3]? 2MASS Johnson H-band magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_H}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Hmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/10]? Uncertainty in Hmag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Kmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-4.4/25]? 2MASS Johnson Ks-band magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_JHN_K}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Kmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/10]? Uncertainty in Kmag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: q_2MASS
+#   datatype: string
+#   description: Quality Flags for 2MASS (TWOMflag) (8)
+#   meta: !!omap
+#   - {ucd: CODE_QUALITY}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 19*}
+# - name: W1mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-2.4/19.4]? AllWise W1 (3.4um) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_3.4}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W1mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/0.6]? Uncertainty in W1mag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: W2mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-2.9/23.4]? AllWise W2 (4.6um) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_IR_4.2}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W2mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/0.6]? Uncertainty in W2mag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: W3mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-8.7/22.8]? AllWise W3 (12.0um) magnitude'
+#   meta: !!omap
+#   - {ucd: PHOT_FLUX_IR_12}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W3mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/0.6]? Uncertainty in W3mag'
+#   meta: !!omap
+#   - {ucd: ERROR}
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: W4mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-8.3/22.6]? AllWise W4 (22.Oum) magnitude'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_W4mag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/0.6]? Uncertainty in W4mag'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Gmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[1.7/23.5]? GAIA DR2 G magnitude (GAIAmag)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_Gmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[0/2.4]? Uncertainty in Gmag (e_GAIAmag)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: Tmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[-1.8/27.4] TESS magnitude (9)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+# - name: e_Tmag
+#   unit: mag
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.006/50]? Uncertainty in Tmag'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: f_Tmag
+#   datatype: string
+#   description: TESS magnitude flag (TESSflag) (10)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# - name: Flag
+#   datatype: string
+#   description: Stellar properties flag (SPFlag) (4)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# - name: Teff
+#   unit: K
+#   datatype: float64
+#   format: '{:7.1f}'
+#   description: '[2717/79742]? Effective temperature (11)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: s_Teff
+#   unit: K
+#   datatype: float64
+#   format: '{:7.1f}'
+#   description: '[0/27791]? Uncertainty in Teff ( e_Teff ) (12)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: logg
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   format: '{:7.4f}'
+#   description: '[3/6.6]? Log of the surface gravity (13)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: s_logg
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   format: '{:7.4f}'
+#   description: '[0.0004/4.9]? Uncertainty in logg ( e_logg ) (12)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: '[M/H]'
+#   unit: log(Sun)
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[-4.7/1.4]? Metallicity (MH) (14)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: e_[M/H]
+#   unit: log(Sun)
+#   datatype: float32
+#   format: '{:7.4f}'
+#   description: '[0.001/0.5]? Uncertainty in [M/H] (e_MH) (15)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: Rad
+#   unit: solRad
+#   datatype: float64
+#   format: '{:8.3f}'
+#   description: '[0.05/2753]? Radius (rad) (16)'
+#   meta: !!omap
+#   - {width: 8}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: s_Rad
+#   unit: solRad
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.001/13]? Uncertainty in Rad ( e_rad ) (12)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: Mass
+#   unit: solMass
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.08/3.3]? Mass (17)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: s_Mass
+#   unit: solMass
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.01/1.7]? Uncertainty in Mass ( e_mass ) (12)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: rho
+#   unit: Sun
+#   datatype: float64
+#   format: '{:9.4f}'
+#   description: '[0.008/2538]? Stellar density in solar units (Mass/Rad^3)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: s_rho
+#   unit: Sun
+#   datatype: float64
+#   format: '{:9.4f}'
+#   description: '[0.001/2538]? Uncertainty in rho ( e_rho ) (12)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: LClass
+#   datatype: string
+#   description: Luminosity Class (lumclass) (18)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 8*}
+# - name: Lum
+#   unit: solLum
+#   datatype: float64
+#   format: '{:10.5f}'
+#   description: '[0/5917]? Stellar luminosity; Rad^2^*(Teff/5772)^4^'
+#   meta: !!omap
+#   - {width: 10}
+#   - {precision: '5'}
+#   - values: {'null': .nan}
+# - name: s_Lum
+#   unit: solLum
+#   datatype: float64
+#   format: '{:10.5f}'
+#   description: '[0/5764]? Uncertainty in Lum ( e_lum ) (12)'
+#   meta: !!omap
+#   - {width: 10}
+#   - {precision: '5'}
+#   - values: {'null': .nan}
+# - name: Dist
+#   unit: pc
+#   datatype: float64
+#   format: '{:12.4f}'
+#   description: '[1/1567769]? Distance from Bailer-Jones+ (2018, I/347) (d)'
+#   meta: !!omap
+#   - {width: 12}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: s_Dist
+#   unit: pc
+#   datatype: float64
+#   format: '{:12.4f}'
+#   description: '[0.0003/1565730]? Uncertainty in Dist (e_d) (12)'
+#   meta: !!omap
+#   - {width: 12}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: E(B-V)
+#   unit: mag
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[0/47.4]? Applied color excess (ebv) (19)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: s_E(B-V)
+#   unit: mag
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[0/20]? Uncertainty in E(B-V) (e_ebv) (12)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: Ncont
+#   datatype: int16
+#   description: '[6/15080]? Number of contaminants found within 10" of the star, used in the calculation of the contamination ratio (numcont)'
+#   meta: !!omap
+#   - {width: 5}
+#   - values: {'null': -32768}
+# - name: Rcont
+#   datatype: float64
+#   format: '{:10.4f}'
+#   description: '[0/40556]? Contamination ratio (contratio) (20)'
+#   meta: !!omap
+#   - {width: 10}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: Disp
+#   datatype: string
+#   description: Disposition type (disposition) (21)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 9*}
+# - name: m_TIC
+#   datatype: int64
+#   description: '[42/10005000536]? TIC ID of the ''other'' object in DUPLICATE, or SPLIT set of stars (duplicate_id)'
+#   meta: !!omap
+#   - {width: 11}
+#   - values: {'null': -9223372036854775808}
+# - name: Prior
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[0/0.13]? Priority (1= highest priority) (priority) (22)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_E(B-V)
+#   unit: mag
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[-0.03/22]? Negative error for E (B-V) (eneg_EBV)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: E_E(B-V)
+#   unit: mag
+#   datatype: float64
+#   format: '{:7.4f}'
+#   description: '[-0.04/35]? Positive error for E (B-V) (epos_EBV)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: f_E(B-V)
+#   datatype: string
+#   description: Source of E (B-V) (EBVflag) (23)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 9*}
+# - name: e_Mass
+#   unit: solMass
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0/2]? Negative error for Mass (eneg_Mass)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: E_Mass
+#   unit: solMass
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.03/2]? Positive error for Mass (epos_Mass)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_Rad
+#   unit: solRad
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.008/3.1]? Negative error for Radius (eneg_Rad)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: E_Rad
+#   unit: solRad
+#   datatype: float32
+#   format: '{:6.3f}'
+#   description: '[0.01/24]? Positive error for Radius (epos_Rad)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '3'}
+#   - values: {'null': .nan}
+# - name: e_rho
+#   unit: Sun
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '[0/227]? Negative error for Density (eneg_rho)'
+#   meta: !!omap
+#   - {width: 8}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: E_rho
+#   unit: Sun
+#   datatype: float64
+#   format: '{:8.4f}'
+#   description: '[0.001/227]? Positive error for Density (epos_rho)'
+#   meta: !!omap
+#   - {width: 8}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: e_logg
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   format: '{:7.4f}'
+#   description: '[0.02/1.7]? Negative error for Surface Gravity (eneg_logg)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: E_logg
+#   unit: log(cm.s**-2)
+#   datatype: float32
+#   format: '{:7.4f}'
+#   description: '[0.01/0.7]? Positive error for Surface Gravity (epos_logg)'
+#   meta: !!omap
+#   - {width: 7}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: e_Lum
+#   unit: solLum
+#   datatype: float64
+#   format: '{:10.5f}'
+#   description: '[0/1424]? Negative error for Luminosity (eneg_lum)'
+#   meta: !!omap
+#   - {width: 10}
+#   - {precision: '5'}
+#   - values: {'null': .nan}
+# - name: E_Lum
+#   unit: solLum
+#   datatype: float64
+#   format: '{:10.5f}'
+#   description: '[0.001/2352]? Positive error for Luminosity (epos_lum)'
+#   meta: !!omap
+#   - {width: 10}
+#   - {precision: '5'}
+#   - values: {'null': .nan}
+# - name: e_Dist
+#   unit: pc
+#   datatype: float64
+#   format: '{:10.4f}'
+#   description: '[0.0003/19098]? Negative Error for Distance (eneg_dist) (24)'
+#   meta: !!omap
+#   - {width: 10}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: E_Dist
+#   unit: pc
+#   datatype: float64
+#   format: '{:14.4f}'
+#   description: '[0.0003/155560992]? Positive Error for Distance (epos_dist) (24)'
+#   meta: !!omap
+#   - {width: 14}
+#   - {precision: '4'}
+#   - values: {'null': .nan}
+# - name: r_Dist
+#   datatype: string
+#   description: Source of distance (distflag) (4)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 6*}
+# - name: e_Teff
+#   unit: K
+#   datatype: float32
+#   format: '{:6.1f}'
+#   description: '[7/6390]? Negative error for effective temperature (eneg_Teff)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: E_Teff
+#   unit: K
+#   datatype: float32
+#   format: '{:6.1f}'
+#   description: '[10/4809]? Positive error for effective temperature (epos_Teff)'
+#   meta: !!omap
+#   - {width: 6}
+#   - {precision: '1'}
+#   - values: {'null': .nan}
+# - name: r_Teff
+#   datatype: string
+#   description: Source of effective Temperature (Tefflag) (4)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 6*}
+# - name: BPmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[2.5/25.4]? Gaia Bp magnitude (gaiabp)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_BPmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[0/9]? Error in Bpmag (e_gaiabp)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: RPmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[0.001/28.8]? Gaia Rp magnitude (gaiarp)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_RPmag
+#   unit: mag
+#   datatype: float64
+#   format: '{:9.6f}'
+#   description: '[0/50]? Error in Rpmag (e_gaiarp)'
+#   meta: !!omap
+#   - {width: 9}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: q_Gaia
+#   datatype: int16
+#   description: '[-1/1]? Quality of Gaia information (gaiaqflag) (25)'
+#   meta: !!omap
+#   - {width: 2}
+#   - values: {'null': -32768}
+# - name: r_Vmag
+#   datatype: string
+#   description: Source of V magnitude (VmagFlag) (4)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 11*}
+# - name: r_Bmag
+#   datatype: string
+#   description: Source of B magnitude (BmagFlag) (4)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 8*}
+# - name: Clist
+#   datatype: string
+#   description: Identifies if star is in a specially curated list (splits)
+#   meta: !!omap
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 15*}
+# - name: e_RAJ2000
+#   unit: mas
+#   datatype: float64
+#   format: '{:13.6f}'
+#   description: '[4.6e-5/281160]? Error in RAdeg (e_RA)'
+#   meta: !!omap
+#   - {width: 13}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_DEJ2000
+#   unit: mas
+#   datatype: float64
+#   format: '{:13.6f}'
+#   description: '[4e-5/241060]? Error in DEdeg (e_Dec)'
+#   meta: !!omap
+#   - {width: 13}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: RAOdeg
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: '? RA from original catalog (RA_orig)'
+#   meta: !!omap
+#   - {width: 15}
+#   - {precision: '11'}
+#   - values: {'null': .nan}
+# - name: DEOdeg
+#   unit: deg
+#   datatype: float64
+#   format: '{:15.11f}'
+#   description: '? Dec from original catalog (Dec_orig)'
+#   meta: !!omap
+#   - {width: 15}
+#   - {precision: '11'}
+#   - values: {'null': .nan}
+# - name: e_RAOdeg
+#   unit: mas
+#   datatype: float64
+#   format: '{:13.6f}'
+#   description: '[4.6e-5/281160]? RA error as given in original catalog (e_RA_orig)'
+#   meta: !!omap
+#   - {width: 13}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: e_DEOdeg
+#   unit: mas
+#   datatype: float64
+#   format: '{:13.6f}'
+#   description: '[4e-5/241060]? DEC error as given in original catalog (e_Dec_orig)'
+#   meta: !!omap
+#   - {width: 13}
+#   - {precision: '6'}
+#   - values: {'null': .nan}
+# - name: RadFl
+#   datatype: int16
+#   description: '[-1/1]? 1=dwarf by radius, 0=giant by radius (raddflag)'
+#   meta: !!omap
+#   - {width: 2}
+#   - values: {'null': -32768}
+# - name: WDFl
+#   datatype: int16
+#   description: '[-1/1]? 1=star in Gaia''s photometric White Dwarf region (wdflag)'
+#   meta: !!omap
+#   - {width: 2}
+#   - values: {'null': -32768}
+# - name: ID
+#   datatype: int32
+#   description: '[1/1727987580] Object identifier ( objID )'
+#   meta: !!omap
+#   - {width: 10}
+# - name: Sloan
+#   datatype: string
+#   description: Display the SDSS data for this object
+#   meta: !!omap
+#   - {ucd: DATA_LINK}
+#   - {_votable_string_dtype: char}
+#   - {_votable_arraysize: 5*}
+# meta: !!omap
+# - {ID: IV_39_tic82}
+# - {name: IV/39/tic82}
+# - {description: 'Transiting Exoplanet Survey Satellite (TESS) Input Catalog - v8.2 (TIC-8.2), outpout (on a total of 1,727,987,580 sources)'}
+# schema: astropy-2.0
+TIC RAJ2000 DEJ2000 HIP TYC UCAC4 2MASS objID WISEA GAIA APASS KIC S/G Ref r_Pos pmRA e_pmRA pmDE e_pmDE r_pm Plx e_Plx r_Plx GLON GLAT ELON ELAT Bmag e_Bmag Vmag e_Vmag umag e_umag gmag e_gmag rmag e_rmag imag e_imag zmag e_zmag Jmag e_Jmag Hmag e_Hmag Kmag e_Kmag q_2MASS W1mag e_W1mag W2mag e_W2mag W3mag e_W3mag W4mag e_W4mag Gmag e_Gmag Tmag e_Tmag f_Tmag Flag Teff s_Teff logg s_logg [M/H] e_[M/H] Rad s_Rad Mass s_Mass rho s_rho LClass Lum s_Lum Dist s_Dist E(B-V) s_E(B-V) Ncont Rcont Disp m_TIC Prior e_E(B-V) E_E(B-V) f_E(B-V) e_Mass E_Mass e_Rad E_Rad e_rho E_rho e_logg E_logg e_Lum E_Lum e_Dist E_Dist r_Dist e_Teff E_Teff r_Teff BPmag e_BPmag RPmag e_RPmag q_Gaia r_Vmag r_Bmag Clist e_RAJ2000 e_DEJ2000 RAOdeg DEOdeg e_RAOdeg e_DEOdeg RadFl WDFl ID Sloan
+149928372 162.06690890684 65.10010602596 "" "" 776-029251 10481607+6506002 1237651271896399918 J104815.87+650600.2 1058588908797940864 59792137 "" STAR tmgaia2 tmgaia2 -103.049 0.034 -15.878 0.037 gaia2 12.5627 0.0242 gaia2 141.48140251027 47.34847517624 129.86141996739 51.31829534057 14.163 0.074 12.756 0.092 16.57 0.007 14.782 0.009 12.36 0.002 11.77 0.002 12.193 0.005 10.156 0.019 9.517 0.019 9.328 0.015 AAA-222-111-p0c-0-0 9.28 0.023 9.323 0.02 9.243 0.031 8.475 "" 12.2324 0.000277 11.396 0.006 gbprp gaia2 4000.0 125.2 4.5913 0.122 "" "" 0.66 0.067 0.62 0.081 2.1562 0.8084 DWARF 0.10048 0.00821 79.4178 0.154 0.0 0.0 31 0.0191 "" "" 0.001977 0.0 0.0 "" 0.076 0.085 0.068 0.065 0.8249 0.7919 0.1113 0.1327 0.00743 0.00898 0.1536 0.1543 bj2018 103.9 146.4 dered0 13.0963 0.001581 11.333 0.00109 1 ucac4 apassdr9 "" 0.633217 0.569783 162.06585511296 65.10003766648 0.018908 0.01779 1 0 141761496 Sloan

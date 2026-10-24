@@ -1,0 +1,73 @@
+{
+ "transitEpochBtjd": {
+  "value": 2584.2856818273526,
+  "unc": 0.0045321854
+ },
+ "eccentricity": {
+  "value": 0.0,
+  "unc": 0.0
+ },
+ "longitudeOfPeriDegrees": {
+  "value": 0.0,
+  "unc": 0.0
+ },
+ "planetRadiusEarthRadii": {
+  "value": 2.9721097602995346,
+  "unc": 1.444728
+ },
+ "semiMajorAxisAu": {
+  "value": 0.10768303768231285,
+  "unc": 0.012420629
+ },
+ "minImpactParameter": {
+  "value": 0.019365640772728267,
+  "unc": 108.720955
+ },
+ "starRadiusSolarRadii": {
+  "value": 0.660040020942688,
+  "unc": 0.0667085
+ },
+ "transitDurationHours": {
+  "value": 3.9343912808246184,
+  "unc": 0.6315322
+ },
+ "transitIngressTimeHours": {
+  "value": 0.15595494118479925,
+  "unc": 0.72705746
+ },
+ "transitDepthPpm": {
+  "value": 2054.805185075897,
+  "unc": 216.64542
+ },
+ "orbitalPeriodDays": {
+  "value": 16.37788359582205,
+  "unc": 0.0062847706
+ },
+ "ratioPlanetRadiusToStarRadius": {
+  "value": 0.04124696734299836,
+  "unc": 0.019611789
+ },
+ "ratioSemiMajorAxisToStarRadius": {
+  "value": 33.11249259770776,
+  "unc": 68.79407
+ },
+ "inclinationDegrees": {
+  "value": 89.96649090841402,
+  "unc": 188.19356
+ },
+ "equilibriumTempKelvin": {
+  "value": 436.98183900611406,
+  "unc": 25.681005
+ },
+ "effectiveStellarFlux": {
+  "value": 8.617366298253117,
+  "unc": 2.0257375
+ },
+ "starDensitySolarDensity": {
+  "value": 1.8184301684031627,
+  "unc": 11.334218
+ },
+ "oddEven": "oddEvenTransitDepthComparisonStatistic value=\"0.100709006\" significance=\"0.75098044\"/",
+ "weakSecondary": "weakSecondary maxMes=\"3.1278381\" maxMesPhaseInDays=\"1.9791429\" minMes=\"-2.8364193\" mesMad=\"0.7319937\" minMesPhaseInDays=\"-2.1041887\" medianMes=\"0.015206695\" nValidPhases=\"999\" robustStatistic=\"2.4972036\"",
+ "planetCandidate": "planetCandidate expectedTransitCount=\"2\" modelChiSquare2=\"0.031636056\" modelChiSquareDof2=\"1\" modelChiSquareGof=\"24.52758\" modelChiSquareGofDof=\"47\" observedTransitCount=\"2\" planetNumber=\"1\" suspectedEclipsingBinary=\"false\" chiSquare2=\"0.09580747\" chiSquareDof2=\"6.7748623\" chiSquareGof=\"50.417904\" chiSquareGofDof=\"41.0\" epochTjd=\"2584.2882251576043\" maxMultipleEventSigma=\"8.849426\" maxSesInMes=\"6.7274485\" maxSingleEventSigma=\"8.865519\" orbitalPeriodInDays=\"16.374992\" robustStatistic=\"8.393735\" thresholdForDesiredPfa=\"-1.0\" trialTransitPulseDurationInHours=\"3.5\""
+}

@@ -1,0 +1,5 @@
+.venv*/
+__pycache__/
+*.fits
+*.pkl
+.DS_Store
