@@ -23,6 +23,9 @@ The signal was a SPOC full-frame-image threshold-crossing event in Sector 47 (`1
 | False-positive probability | 0.0169 ± 0.0035 (no companion limits), 0.0019 ± 0.0017 (MOLUSC Gaia limits); no neighbours removed |
 | High-resolution imaging | not checked |
 
+
+**Independent detection.** The Eumemic full-sky search (https://github.com/eumemic/exoplanets, commit d3daa0f) also found this signal at 16.3645 d and set it aside for a centroid offset; it appears in their public false-alarm classifier table (`validation/false_alarm_classifier_table.csv.gz`, label `real`, class `offset`), not in their candidate lists. Our seven-sector pixel fits put the dip on the target.
+
 ## Contents
 
 - `note/TIC149928372_note.md`, `note/TIC149928372_note.pdf`: the research note (draft; not submitted to a journal).
